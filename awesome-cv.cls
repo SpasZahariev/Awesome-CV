@@ -81,30 +81,69 @@
 \defaultfontfeatures{
   Renderer=HarfBuzz,
 }
-\setmainfont{Source Sans 3}[
-  UprightFont=*,
-  ItalicFont=* Italic,
-  BoldFont=* Bold,
-  BoldItalicFont=* Bold Italic,
-  FontFace={l}{n}{Font=* Light},
-  FontFace={l}{it}{Font=* Light Italic},
-]
-\setsansfont{Source Sans 3}[
-  UprightFont=*,
-  ItalicFont=* Italic,
-  BoldFont=* Bold,
-  BoldItalicFont=* Bold Italic,
-  FontFace={l}{n}{Font=* Light},
-  FontFace={l}{it}{Font=* Light Italic},
-]
-\newfontfamily\roboto{Roboto}[
-  UprightFont=*,
-  ItalicFont=* Italic,
-  BoldFont=* Bold,
-  BoldItalicFont=* Bold Italic,
-  FontFace={l}{n}{Font=* Light},
-  FontFace={l}{it}{Font=* Light Italic},
-]
+\IfFontExistsTF{Source Sans 3}{%
+\IfFontExistsTF{Source Sans 3}{%
+  \setmainfont{Source Sans 3}[
+    UprightFont=*,
+    ItalicFont=* Italic,
+    BoldFont=* Bold,
+    BoldItalicFont=* Bold Italic,
+    FontFace={l}{n}{Font=* Light},
+    FontFace={l}{it}{Font=* Light Italic},
+  ]
+  \setsansfont{Source Sans 3}[
+    UprightFont=*,
+    ItalicFont=* Italic,
+    BoldFont=* Bold,
+    BoldItalicFont=* Bold Italic,
+    FontFace={l}{n}{Font=* Light},
+    FontFace={l}{it}{Font=* Light Italic},
+  ]
+}{%
+  % Source Sans 3 ships with some OS/Adobe installs only; TeX Live bundles
+  % Source Sans Pro OTFs under TEXMF for portable builds.
+  \setmainfont{SourceSansPro-Regular.otf}[
+    ItalicFont=SourceSansPro-RegularIt.otf,
+    BoldFont=SourceSansPro-Bold.otf,
+    BoldItalicFont=SourceSansPro-BoldIt.otf,
+    FontFace={l}{n}{Font=SourceSansPro-Light.otf},
+    FontFace={l}{it}{Font=SourceSansPro-LightIt.otf},
+  ]
+  \setsansfont{SourceSansPro-Regular.otf}[
+    ItalicFont=SourceSansPro-RegularIt.otf,
+    BoldFont=SourceSansPro-Bold.otf,
+    BoldItalicFont=SourceSansPro-BoldIt.otf,
+    FontFace={l}{n}{Font=SourceSansPro-Light.otf},
+    FontFace={l}{it}{Font=SourceSansPro-LightIt.otf},
+  ]
+}
+}{%
+  % Source Sans 3 ships with some OS/Adobe installs only; TeX Live bundles
+  % Source Sans Pro OTFs under TEXMF for portable builds.
+  \setmainfont{SourceSansPro-Regular.otf}[
+    ItalicFont=SourceSansPro-RegularIt.otf,
+    BoldFont=SourceSansPro-Bold.otf,
+    BoldItalicFont=SourceSansPro-BoldIt.otf,
+    FontFace={l}{n}{Font=SourceSansPro-Light.otf},
+    FontFace={l}{it}{Font=SourceSansPro-LightIt.otf},
+  ]
+  \setsansfont{SourceSansPro-Regular.otf}[
+    ItalicFont=SourceSansPro-RegularIt.otf,
+    BoldFont=SourceSansPro-Bold.otf,
+    BoldItalicFont=SourceSansPro-BoldIt.otf,
+    FontFace={l}{n}{Font=SourceSansPro-Light.otf},
+    FontFace={l}{it}{Font=SourceSansPro-LightIt.otf},
+  ]
+}
+% Load by OTF file name so fonts resolve from TEXMF (roboto pkg) when the
+% OS does not provide a ``Roboto'' family (avoids missing-metric errors).
+\newfontfamily\roboto[
+  BoldFont = Roboto-Bold.otf,
+  BoldItalicFont = Roboto-BoldItalic.otf,
+  ItalicFont = Roboto-Italic.otf,
+  FontFace={l}{n}{Font=Roboto-Light.otf},
+  FontFace={l}{it}{Font=Roboto-LightItalic.otf},
+]{Roboto-Regular.otf}
 % Needed for the photo ID
 \RequirePackage[skins]{tcolorbox}
 % Needed to deal a paragraphs
