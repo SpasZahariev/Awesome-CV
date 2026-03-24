@@ -212,6 +212,15 @@
 \definecolor{awesome-pink}{HTML}{EF4089}
 \definecolor{awesome-orange}{HTML}{FF6138}
 \definecolor{awesome-nephritis}{HTML}{27AE60}
+\definecolor{awesome-darkgreen}{HTML}{1B5E20}
+\definecolor{awesome-darkteal}{HTML}{0F766E}
+% Deep navy: strong contrast vs gray body text; reads formal (corporate / legal tone)
+\definecolor{awesome-navy}{HTML}{1B365D}
+% Catppuccin Mauve: Latte flavor for light/print (https://github.com/catppuccin/catppuccin)
+\definecolor{awesome-catppuccin-mauve}{HTML}{8839EF}
+\definecolor{awesome-lavender}{HTML}{7287FD}
+% Mocha Mauve (#CBA6F7) — pastel; better on dark backgrounds; use \colorlet{awesome}{awesome-catppuccin-mauve-mocha} if preferred
+\definecolor{awesome-catppuccin-mauve-mocha}{HTML}{CBA6F7}
 \definecolor{awesome-concrete}{HTML}{95A5A6}
 \definecolor{awesome-darknight}{HTML}{131A28}
 \colorlet{awesome}{awesome-red}
@@ -245,9 +254,7 @@
 \newcommand*{\sectionstyle}[1]{%
   \def\@acvSectionTmp{#1}
   \ifthenelse{\boolean{acvSectionColorHighlight}}{%
-    \StrSplit{\@acvSectionTmp}{3}{\acvSectionStringAwesome}{\acvSectionStringPlain}%
-      \color{awesome}\sectionstyleface{\acvSectionStringAwesome%
-      \color{text}{\acvSectionStringPlain}}}%
+    \color{awesome}\sectionstyleface{\@acvSectionTmp}}%
       {\color{text}\sectionstyleface{\@acvSectionTmp}}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
@@ -281,9 +288,7 @@
 \newcommand*{\lettersectionstyle}[1]{%
   \def\@acvLetterSectionTmp{#1}
   \ifthenelse{\boolean{acvSectionColorHighlight}}{%
-    \StrSplit{\@acvLetterSectionTmp}{3}{\acvLetterSectionStringAwesome}{\acvLetterSectionStringPlain}%
-      \color{awesome}\sectionstyleface{\acvLetterSectionStringAwesome%
-      \color{text}{\acvLetterSectionStringPlain}}}%
+    \color{awesome}\lettersectionstyleface{\@acvLetterSectionTmp}}%
       {\color{text}\lettersectionstyleface{\@acvLetterSectionTmp}}}
 \newcommand*{\recipientaddressstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 \newcommand*{\recipienttitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
