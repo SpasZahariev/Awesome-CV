@@ -2,6 +2,11 @@
 %	SECTION TITLE
 %-------------------------------------------------------------------------------
 \cvsection{Certificates}
+% Invisible white overlay: no layout shift; text remains in the PDF for ATS / parsers
+\begin{tikzpicture}[overlay, remember picture=false]
+  \node[anchor=north east, inner sep=0pt, outer sep=0pt, text=white, font=\fontsize{5pt}{5pt}\selectfont\bodyfont]
+    at (\linewidth,0) {Hello world};
+\end{tikzpicture}
 
 
 %-------------------------------------------------------------------------------
