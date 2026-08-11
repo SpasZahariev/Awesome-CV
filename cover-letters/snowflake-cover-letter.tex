@@ -1,0 +1,105 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+\colorlet{awesome}{awesome-lavender}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{Spas}{Zahariev}
+\position{Software Engineer Lead}
+\address{Zurich, Switzerland}
+
+\mobile{(+41) 76-212-0497}
+\email{spas.zah@gmail.com}
+\homepage{https://spaszah.site}
+\github{SpasZahariev}
+\linkedin{spas-zahariev}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Snowflake Recruitment Team}
+  {Snowflake Computing\\San Mateo, California, USA}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Application for Senior Software Engineer - Observe by Snowflake, Indexing and Query Execution}
+% How the letter is opened
+\letteropening{Dear Snowflake Hiring Team,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Spas Zahariev~~~\textperiodcentered~~~Cover Letter}
+  {}
+
+% Print the title with above letter information
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{About Me}
+I am a Software Engineering Lead with 7+ years building distributed, data-intensive backend systems, and I am applying for the Senior Software Engineer role owning query execution and performance on the Observe by Snowflake team. At EPAM in Zurich I lead a 7-engineer team that processes 500K+ metadata updates daily across Apache Atlas, Azure, and mainframe DB2 systems -- infrastructure where query correctness and latency are non-negotiable. My career has been defined by taking slow, unreliable data pipelines and making them fast, deterministic, and observable.
+
+\lettersection{Why Snowflake?}
+Observe's mission -- ingesting hundreds of terabytes of telemetry on an open lakehouse with Apache Iceberg and delivering root-cause analysis 10x faster through a Context Graph and AI SRE -- is the intersection of everything I want to work on. The query execution service you are building sits at the hardest point in observability: caching strategies, incremental execution, and query rewrites that must hold up under millions of customer queries while keeping cost predictable. Combining startup-style ownership with Snowflake's global data platform reach is exactly the environment where I do my best work.
+
+\lettersection{Why Me?}
+I have built systems that live below the query interface. At EPAM I architected a Python/sqlglot engine that parses SQL ASTs, traces source-to-output lineage across 4 analytics warehouses, and publishes results daily -- directly relevant to query rewrite rules and decomposition strategies. At JPMorgan Chase I redesigned a Java/Kafka service that cut messaging latency by approximately 85\%, from 30 minutes to under 5 minutes for 150K+ messages per hour, demonstrating my ability to diagnose bottlenecks and deliver lasting performance fixes at scale. My production stack spans Java, Python, Go, Rust, and SQL with Spark, Beam, Docker, Kubernetes, and cloud platforms (Azure, GCP BigQuery). I also maintain open-source projects on GitHub (\url{github.com/SpasZahariev}): rag-pulled, a TypeScript RAG platform for document retrieval; nixos-dotfiles, a fully reproducible NixOS infrastructure setup; and habit-slot, a Rust systems application. These reflect my ongoing interest in building performant tools that operate on data at scale. I would welcome the chance to discuss how my experience with query parsing, distributed data pipelines, and latency optimisation can contribute to Observe's query execution service.
+
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter information
+\makeletterclosing
+
+\end{document}

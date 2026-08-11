@@ -1,0 +1,105 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+\colorlet{awesome}{awesome-lavender}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{Spas}{Zahariev}
+\position{Software Engineer Lead}
+\address{Zurich, Switzerland}
+
+\mobile{(+41) 76-212-0497}
+\email{spas.zah@gmail.com}
+\homepage{https://spaszah.site}
+\github{SpasZahariev}
+\linkedin{spas-zahariev}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {DeepJudge Recruitment Team}
+  {DeepJudge\\Zurich, Switzerland}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Application for Applied AI Engineer}
+% How the letter is opened
+\letteropening{Dear DeepJudge Hiring Team,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Spas Zahariev~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter information
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{About Me}
+I am a Software Engineering Lead based in Zurich with 7+ years building backend systems, full-stack applications, and AI/ML pipelines across regulated finance and large-scale consulting. At EPAM I lead a 7-engineer team owning data-integrity architecture end-to-end, keeping 500K+ metadata updates per day consistent across Apache Atlas, Azure, and mainframe DB2 systems. My recent work extends deeply into LLMs, RAG pipelines, and agent design -- the exact intersection of production engineering and applied AI that this role demands.
+
+\lettersection{Why DeepJudge?}
+DeepJudge's mission to unlock trapped institutional knowledge in law firms through enterprise search and AI infrastructure is a problem I want to work on. The gap between raw LLM capability and dependable, customer-facing solutions in high-stakes domains is where the real engineering challenge lives. Building reusable AI-powered experiences on top of your platform for firms like Freshfields and Gunderson Dettmer -- not demos, but systems thousands of end users rely on daily -- is exactly the kind of ownership-driven work I am looking for.
+
+\lettersection{Why Me?}
+My stack maps directly to what you need. I work daily in Python and TypeScript, with deep hands-on experience in LLMs, RAG pipelines, agent design, and machine learning (TensorFlow/Keras). I have shipped production systems at scale: a Kafka-driven async service that cut messaging latency by 85\% for 150K+ messages per hour at JPMorgan Chase, and an automated data-lineage pipeline spanning 4 analytics warehouses at EPAM. I am comfortable evaluating emerging LLM techniques and bringing them into production, and I have a track record of working directly with non-technical stakeholders -- from building live dashboards for 10+ analysts to serving on expert-assessment committees and mentoring engineers. I would welcome the chance to discuss how I can help DeepJudge turn its platform into high-value AI solutions that law firms depend on.
+
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter information
+\makeletterclosing
+
+\end{document}

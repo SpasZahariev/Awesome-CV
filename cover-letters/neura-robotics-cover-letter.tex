@@ -1,0 +1,105 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+\colorlet{awesome}{awesome-lavender}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{Spas}{Zahariev}
+\position{Software Engineer Lead}
+\address{Zurich, Switzerland}
+
+\mobile{(+41) 76-212-0497}
+\email{spas.zah@gmail.com}
+\homepage{https://spaszah.site}
+\github{SpasZahariev}
+\linkedin{spas-zahariev}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {NEURA Robotics Recruitment Team}
+  {NEURA Robotics GmbH\\Zurich, Switzerland}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Application for Senior Robotics Middleware Engineer - Humanoid}
+% How the letter is opened
+\letteropening{Dear NEURA Robotics Hiring Team,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Spas Zahariev~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter information
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{About Me}
+I am a Software Engineering Lead with 7+ years building backend and distributed systems across fintech, and I am writing about the Senior Robotics Middleware Engineer role on the 4NE-1 Core Robot Software team. My background is not in robotics middleware specifically, but in the discipline the role also demands: getting many independent, high-throughput components to communicate correctly and fast, in production, with zero tolerance for silent failure. At JPMorgan Chase I redesigned a Java messaging service on Kafka with async processing that cut turnaround from 30 minutes to under 5 for 150K+ messages/hour, and at EPAM I lead a 7-engineer team keeping 500K+ metadata updates per day consistent across four distinct systems, including a REST-to-SOAP gateway bridging two incompatible protocol worlds.
+
+\lettersection{Why NEURA Robotics?}
+Building a humanoid software platform where perception, planning, and control must share one coherent, low-latency communication fabric is a systems problem I find genuinely exciting, distinct from the application-layer work I have shipped most of my career but built on the same fundamentals: message contracts, timing guarantees, and reliability under load. I am drawn to the ambition of building this middleware layer for a production humanoid robot rather than a lab prototype, and to the chance to work at the boundary between hard real-time control and distributed, cloud-connected services, a boundary I have worked from the distributed-systems side and want to push closer to the metal.
+
+\lettersection{Why Me?}
+C++ is in my daily toolkit alongside Java and Python, and my production experience is in exactly the problems this role reframes at the middleware level: designing service abstractions across heterogeneous systems (the REST/SOAP gateway at EPAM), architecting event-driven pipelines for throughput and low latency (Kafka at JPMorgan), and running distributed infrastructure reliably on Docker, Kubernetes, and cloud platforms (AWS, Azure, GCP). I have not yet worked directly with ROS 2, DDS, or OROCOS RTT, and I say that plainly rather than overstate it, but I learn unfamiliar systems fast under pressure, as shown by redesigning EPAM's sync pipeline onto Azure with zero integrity incidents. I would welcome the opportunity to bring that same rigor to NEURA's humanoid stack and to grow into the specific middleware ecosystems this role owns.
+
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter information
+\makeletterclosing
+
+\end{document}

@@ -1,0 +1,105 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+\colorlet{awesome}{awesome-lavender}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{Spas}{Zahariev}
+\position{Software Engineer Lead}
+\address{Zurich, Switzerland}
+
+\mobile{(+41) 76-212-0497}
+\email{spas.zah@gmail.com}
+\homepage{https://spaszah.site}
+\github{SpasZahariev}
+\linkedin{spas-zahariev}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Sygnum Recruitment Team}
+  {Sygnum Bank AG\\Uetlibergstrasse 134a\\8045 Zurich, Switzerland}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Application for Senior Software Engineer, AI (VN243)}
+% How the letter is opened
+\letteropening{Dear Sygnum Hiring Team,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Spas Zahariev~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter information
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{About Me}
+I am a Software Engineering Lead with 7+ years building backend and full-stack systems across regulated finance, and I am applying for the Senior Software Engineer, AI role on the Client Lifecycle \& Banking Value Stream team. My career has been split between two worlds that this position brings together: rigorous banking engineering at JPMorgan Chase, and production AI/ML delivery. At EPAM in Zurich I currently lead a 7-engineer team owning data-integrity architecture end-to-end, keeping 500K+ metadata updates per day consistent across Apache Atlas, Azure, and mainframe DB2 systems, work that lives or dies by reliability, auditability, and security rather than demos.
+
+\lettersection{Why Sygnum?}
+Sygnum's ambition to make AI infrastructure inside a regulated bank, not a collection of proofs-of-concept, is exactly the problem I want to work on. I have spent years shipping systems where regulatory exposure and data integrity are first-class constraints, and I believe the hard part of the Sygnum AI Hub is not the prompt, it is making agents dependable enough to sit next to core banking processes. Building a trusted gateway between traditional and digital asset banking, from Zurich where I am already based, is a mission I would be glad to commit to for the long term.
+
+\lettersection{Why Me?}
+The stack maps directly onto my experience. I work daily in Java, Python, and TypeScript, and my recent work is deep in LLMs, RAG pipelines, and agent design, backed by microservices, event-driven architecture (Kafka), containerization (Docker/Kubernetes), and both Azure and GCP (Vertex AI, BigQuery). I have hands-on React experience from building WebSocket-driven dashboards at JPMorgan, and I am comfortable connecting AI agents to real banking systems and data sources, precisely the integration and Model Context Protocol work this role centers on. I would welcome the chance to discuss how I can help turn the Sygnum AI Hub into production infrastructure the bank can rely on.
+
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter information
+\makeletterclosing
+
+\end{document}

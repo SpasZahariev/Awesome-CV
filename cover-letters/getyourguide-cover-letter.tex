@@ -1,0 +1,105 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+\colorlet{awesome}{awesome-lavender}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{Spas}{Zahariev}
+\position{Software Engineer Lead}
+\address{Zurich, Switzerland}
+
+\mobile{(+41) 76-212-0497}
+\email{spas.zah@gmail.com}
+\homepage{https://spaszah.site}
+\github{SpasZahariev}
+\linkedin{spas-zahariev}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {GetYourGuide Recruitment Team}
+  {GetYourGuide\\Zurich, Switzerland}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Application for Senior Software Engineer, Localization Platform}
+% How the letter is opened
+\letteropening{Dear GetYourGuide Hiring Team,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Spas Zahariev~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter information
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{About Me}
+I am a Software Engineering Lead with 7+ years building backend systems that stay correct at scale, and I am applying for the Senior Software Engineer role on the Localization Platform team. At EPAM in Zurich I lead a 7-engineer team owning a Java/Spring Boot sync service that keeps 500K+ metadata updates per day consistent across Apache Atlas, Azure, and mainframe DB2/Postgres, plus a REST-to-SOAP gateway bridging modern and legacy systems. Before that, at JPMorgan Chase I redesigned a Kafka-based messaging service handling 150K+ messages/hour, cutting turnaround from 30 minutes to under 5. Platform work that many teams depend on and cannot see is exactly what I gravitate toward.
+
+\lettersection{Why GetYourGuide?}
+A localization platform is a multiplier: get it right and every product team ships to every market without re-solving translation, formatting, and content-sync problems themselves. That is the same shape of problem I have spent my career on, building shared infrastructure (data-lineage pipelines, cross-system sync services, secure gateways) that other teams build on top of without thinking about it. GetYourGuide's customer-first, experiment-led culture and its investment in engineers, mentorship, training budget, AI tooling, tells me this is a place that treats platform engineering as a craft rather than a cost center, and Zurich is where I am already based and want to keep building.
+
+\lettersection{Why Me?}
+I work daily in Java and Python, backed by microservices, event-driven architecture (Kafka), containerization (Docker/Kubernetes), and both Azure and GCP. I have redesigned batch and streaming pipelines for zero-downtime migrations, built REST/SOAP integration layers across heterogeneous systems, and led architecture-to-production ownership of services with strict consistency requirements, skills that map directly onto keeping a localization platform reliable as GetYourGuide's catalog and language coverage grow. I would welcome the chance to discuss how I can help scale the Localization Platform team's infrastructure.
+
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter information
+\makeletterclosing
+
+\end{document}

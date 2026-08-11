@@ -1,0 +1,105 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+\colorlet{awesome}{awesome-lavender}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{Spas}{Zahariev}
+\position{Software Engineer Lead}
+\address{Zurich, Switzerland}
+
+\mobile{(+41) 76-212-0497}
+\email{spas.zah@gmail.com}
+\homepage{https://spaszah.site}
+\github{SpasZahariev}
+\linkedin{spas-zahariev}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {SIX Recruitment Team}
+  {SIX Group Services Ltd.\\Zurich, Switzerland}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Application for Messaging Platform Engineer, Cloud \& Containers}
+% How the letter is opened
+\letteropening{Dear SIX Hiring Team,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Spas Zahariev~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter information
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{About Me}
+I am a Software Engineering Lead with 7+ years building backend systems across regulated finance and large-scale consulting, specialising in Java/Spring Boot, cloud delivery on Azure, and event-driven architecture. I am applying for the Messaging Platform Engineer, Cloud \& Containers role at SIX. My career has centred on high-throughput messaging and data-integrity platforms where reliability is non-negotiable: at JPMorgan Chase I redesigned a Java service with Kafka and async processing that cut messaging latency by approximately 85\%, from 30 minutes to under 5 minutes for 150K+ messages per hour. At EPAM in Zurich I currently lead a 7-engineer team owning a Java/Spring Boot sync service keeping 500K+ metadata updates per day consistent across Apache Atlas, Azure, and mainframe DB2 systems.
+
+\lettersection{Why SIX?}
+SIX drives the transformation of financial markets, and the shift from an on-premises IBM MQ Appliance to a hybrid messaging portfolio spanning OpenShift and Azure is exactly the kind of infrastructure evolution I want to contribute to. The challenge of expanding business-critical messaging across containers while evaluating complementary cloud-native technologies -- all within a regulated environment where downtime has real market consequences -- matches my background in shipping resilient, observable systems under strict compliance constraints. Being already based in Zurich, I can engage fully with the team from day one.
+
+\lettersection{Why Me?}
+My experience maps directly onto the role's requirements. I have production Java/Spring Boot experience building and leading messaging-adjacent services at scale, hands-on Azure delivery including migrating pipelines to Azure Functions with zero integrity incidents, and container orchestration through Docker and Kubernetes. My skills include Terraform for infrastructure as code, Jenkins CI/CD, and event-driven architecture with Kafka -- the same patterns that underpin modern cloud-native messaging platforms. While my direct experience is with Kafka rather than IBM MQ, the posting notes that experience need not be limited to IBM MQ, and I have a strong track record of rapidly mastering new enterprise technologies within regulated environments. I would welcome the chance to discuss how I can help SIX build its next-generation hybrid messaging portfolio.
+
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter information
+\makeletterclosing
+
+\end{document}
