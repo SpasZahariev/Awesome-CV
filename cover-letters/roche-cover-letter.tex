@@ -1,0 +1,105 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+\colorlet{awesome}{awesome-lavender}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{Spas}{Zahariev}
+\position{Software Engineer Lead}
+\address{Zurich, Switzerland}
+
+\mobile{(+41) 76-212-0497}
+\email{spas.zah@gmail.com}
+\homepage{https://spaszah.site}
+\github{SpasZahariev}
+\linkedin{spas-zahariev}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Roche Recruitment Team}
+  {Roche\\Basel, Switzerland}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Application for Senior Scientific Software Engineer (Fullstack)}
+% How the letter is opened
+\letteropening{Dear Roche Hiring Team,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Spas Zahariev~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter information
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{About Me}
+I am a Software Engineering Lead with 7+ years building full-stack systems across regulated domains, and I am applying for the Senior Scientific Software Engineer (Fullstack) role in the Analytics and Workflows group within Roche's Computational Sciences Center of Excellence. My career spans rigorous banking engineering at JPMorgan Chase, where I built WebSocket-driven React/Redux dashboards that streamlined liquidity monitoring for 10+ analysts, to leading a 7-engineer team at EPAM in Zurich owning data-integrity architecture end-to-end, reconciling 500K+ entities daily across 12 source databases using Java, Python, and cloud infrastructure.
+
+\lettersection{Why Roche?}
+Roche's mission to harness AI and computational sciences to accelerate drug discovery is the kind of high-impact engineering problem I want to dedicate my career to. The Analytics and Workflows group's focus on turning complex chemical and biological data into actionable tools for medicinal chemists sits at the exact intersection of full-stack engineering, data visualization, and scientific impact that motivates me. Building platforms where a better UI directly translates to faster drug candidates and more patients treated is work with measurable human consequence, not just technical elegance.
+
+\lettersection{Why Me?}
+My stack maps directly onto this role's requirements. I build modern web applications across the full stack with TypeScript and React on the front end, and Python with Flask on the back end, backed by Docker, Kubernetes, and cloud infrastructure across AWS, GCP, and Azure. I have hands-on experience building data-rich interactive dashboards at JPMorgan Chase, designing scalable APIs and event-driven architectures with Kafka, and working deeply with ML systems including LLMs, RAG pipelines, and TensorFlow/Keras through production deployments. While I do not come from a chemistry background, I have repeatedly partnered with domain experts to translate ambiguous scientific and regulatory requirements into intuitive, production-grade tools, and I am eager to bring that same product-engineering mindset to molecular design workflows at Roche.
+
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter information
+\makeletterclosing
+
+\end{document}
