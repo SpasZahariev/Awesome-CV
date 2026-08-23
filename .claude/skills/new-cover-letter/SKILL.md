@@ -24,6 +24,7 @@ Treat candidate claims as a correctness constraint.
    - `examples/resume/experience.tex`
    - `examples/resume/skills.tex`
    - Other `examples/resume/*.tex` files when relevant
+   - portfolio website: https://spaszahariev.github.io/spas-zahariev
 3. User-provided facts may supplement the resume. Existing cover letters are style references and leads, not authoritative evidence for new claims.
 4. Never invent or inflate metrics, scope, ownership, customers, technologies, motivations, or company facts. Do not turn team results into sole personal ownership unless the source supports it.
 5. If a missing fact is essential, ask one targeted question. Otherwise write the strongest truthful letter from available evidence.
